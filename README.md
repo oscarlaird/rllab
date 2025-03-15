@@ -1,3 +1,14 @@
+# INSTALLATION FOR VIME (with mujoco dependency)
+
+- Use the docker image `dementrock/rllab-gpu` https://hub.docker.com/layers/dementrock/rllab-gpu/latest/images/sha256-e94c068cd48b694e7965a1301567b6f17ee6420ef9eb8d7f1bb81f789c5f5403
+- Install the py2 branch of rllab (this repository)
+- Get mujoco (physics engine) `wget https://www.roboti.us/download/mjpro131_linux.zip; unzip mjpro131_linux.zip` https://github.com/dannysdeng/gym-mujoco-pixel?tab=readme-ov-file
+- Copy mujoco binaries to `./vendor/mujoco`
+- Get license from https://www.roboti.us/license.html and move to `./vendor/mujoco`
+- You can now add vime as a submodule. https://github.com/openai/vime
+
+# Introduction
+
 rllab is no longer under active development, but an [alliance of researchers](https://github.com/rlworkgroup/) from several universities has adopted it, and now maintains it under the name [**garage**](https://github.com/rlworkgroup/garage).
 
 We recommend you develop new projects, and rebase old ones, onto the actively-maintained [garage](https://github.com/rlworkgroup/garage) codebase, to promote reproducibility and code-sharing in RL research. The new codebase shares almost all of its code with rllab, so most conversions only need to edit package import paths and perhaps update some renamed functions. 
